@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour
     private float _verticallDirect;
     private float _mouseX;
     private float _mouseY;
+    private bool _leftButtonMouse;
 
     private Vector2 _secondaryMovementDirection;
     private Vector3 _primnaryMovementVertical;
@@ -43,15 +44,25 @@ public class PlayerInput : MonoBehaviour
         get { return _mouseX; }
         private set { _mouseX = value; }
     }
+    public bool LeftButtonMouse
+    {
+        get { return _leftButtonMouse; }
+        private set { _leftButtonMouse = value;}
+    }
 
     public event Action OnDashPush;
- 
 
+    //private void Awake()
+    //{
+    //    Cursor.lockState= CursorLockMode.Locked;
+    //    Cursor.visible = false;
+    //}
     void Update()
     {
         PrimaryMoveInput();
         SecondaryMoveInput();
         DashInput();
+        ActionMouse();
     }
 
     void PrimaryMoveInput()
@@ -74,5 +85,10 @@ public class PlayerInput : MonoBehaviour
         {
             OnDashPush?.Invoke();
         }
+    }
+
+    private void ActionMouse()
+    {
+       _leftButtonMouse = Input.GetButtonDown("Fire1");
     }
 }
