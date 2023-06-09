@@ -353,10 +353,11 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
-"Assets/Scripts/AccelerationPlayer.cs"
 "Assets/Scripts/CameraControll.cs"
-"Assets/Scripts/MouseController.cs"
-"Assets/Scripts/Player.cs"
+"Assets/Scripts/DashAbility.cs"
+"Assets/Scripts/MovementAbilityTank.cs"
+"Assets/Scripts/PlayerInput.cs"
+"Assets/Scripts/RotationTowerAbility.cs"
 -langversion:9.0
 
 /deterministic
